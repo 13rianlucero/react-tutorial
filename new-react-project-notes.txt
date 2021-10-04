@@ -1,0 +1,239 @@
+######################################################################
+#### WEBSITE - https://reactjs.org/tutorial/tutorial.html
+######################################################################
+
+
+
+
+######################################################################
+#### NEW REACT APP - MESSAGE FROM TERMINAL - WHEN DONE CORRECTLY
+######################################################################
+
+Success! Created react-tutorial at C:\Users\13ria\Documents\GitHub\react-tutorial
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd C:\Users\13ria\Documents\GitHub\react-tutorial
+  npm start
+
+Happy hacking!
+
+
+
+######################################################################
+#### NEW REACT APP - INSTRUCTIONS FROM WEBSITE
+######################################################################
+
+
+Make sure you have a recent version of Node.js installed.
+Follow the installation instructions for Create React App to make a new project.
+npx create-react-app my-app
+Delete all files in the src/ folder of the new project
+Note:
+
+Don’t delete the entire src folder, just the original source files inside it. We’ll replace the default source files with examples for this project in the next step.
+
+cd my-app
+cd src
+
+# If you're using a Mac or Linux:
+rm -f *
+
+# Or, if you're on Windows:
+del *
+
+# Then, switch back to the project folder
+cd ..
+Add a file named index.css in the src/ folder with this CSS code.
+Add a file named index.js in the src/ folder with this JS code.
+Add these three lines to the top of index.js in the src/ folder:
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+Now if you run npm start in the project folder and open http://localhost:3000 in the browser, you should see an empty tic-tac-toe field.
+
+
+######################################
+## COMMANDS: 
+######################################
+
+## NEW PROJECT:
+npx create-react-app my-app
+
+## TO DELETE ALL FILES IN A FOLDER:
+
+cd my-app
+cd src
+
+# If you're using a Mac or Linux:
+rm -f *
+
+# Or, if you're on Windows:
+del *
+
+
+
+######################################################################
+#### TERMINAL - SUCCESSFUL LOCAL BUILD USING -> NPM RUN BUILD 
+######################################################################
+
+
+######################################################################
+#### TERMINAL COMMANDS - CONFIGURE LOCALHOST:5000 
+######################################################################
+npm install -g serve -> serve -s build
+
+
+
+Compiled successfully!
+
+You can now view react-tutorial in the browser.  
+
+  Local:            http://localhost:3000        
+  On Your Network:  http://192.168.56.1:3000     
+
+Note that the development build is not optimized.
+To create a production build, use npm run build. 
+
+Terminate batch job (Y/N)? n
+PS C:\Users\13ria\Documents\GitHub\react-tutorial> npm run build
+
+> react-tutorial@0.1.0 build C:\Users\13ria\Documents\GitHub\react-tutorial
+> react-scripts build
+Creating an optimized production build...
+Compiled successfully.
+
+
+  42.18 KB  build\static\js\2.80e7e91d.chunk.js
+  1020 B    build\static\js\main.b8c2e836.chunk.js
+  777 B     build\static\js\runtime-main.08088dd5.js
+  371 B     build\static\css\main.f5f49704.chunk.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+PS C:\Users\13ria\Documents\GitHub\react-tutorial> npm install -g serve
+C:\Users\13ria\AppData\Roaming\npm\serve -> C:\Users\13ria\AppData\Roaming\npm\node_modules\serve\bin\serve.js
++ serve@12.0.1
+added 88 packages from 42 contributors in 4.433s
+PS C:\Users\13ria\Documents\GitHub\react-tutorial> serve -s build
+
+   ┌──────────────────────────────────────────────────┐
+   │                                                  │
+   │   Serving!                                       │
+   │                                                  │
+   │   - Local:            http://localhost:5000      │
+   │   - On Your Network:  http://192.168.56.1:5000   │
+   │                                                  │
+   │   Copied local address to clipboard!             │
+   │                                                  │
+   └──────────────────────────────────────────────────┘
+
+
+INFO: Gracefully shutting down. Please wait...
+PS C:\Users\13ria\Documents\GitHub\react-tutorial> serve -h
+
+  serve - Static file serving and directory listing
+
+  USAGE
+
+      $ serve --help
+      $ serve --version
+      $ serve folder_name
+      $ serve [-l listen_uri [-l ...]] [directory]
+
+      By default, serve will listen on 0.0.0.0:5000 and serve the
+      current working directory on that address.
+
+      Specifying a single --listen argument will overwrite the default, not supplement it.
+
+  OPTIONS
+
+      --help                              Shows this help message
+
+      -v, --version                       Displays the current version of serve
+
+      -l, --listen listen_uri             Specify a URI endpoint on which to listen (see below) -
+                                          more than one may be specified to listen in multiple places
+
+      -p                                  Specify custom port
+
+      -d, --debug                         Show debugging information
+
+      -s, --single                        Rewrite all not-found requests to `index.html`
+
+      -c, --config                        Specify custom path to `serve.json`
+
+      -C, --cors                          Enable CORS, sets `Access-Control-Allow-Origin` to `*`
+
+      -n, --no-clipboard                  Do not copy the local address to the clipboard
+
+      -u, --no-compression                Do not compress files
+
+      --no-etag                           Send `Last-Modified` header instead of `ETag`
+
+      -S, --symlinks                      Resolve symlinks instead of showing 404 errors
+
+          --ssl-cert                          Optional path to an SSL/TLS certificate to serve with HTTPS
+
+          --ssl-key                           Optional path to the SSL/TLS certificate's private key
+
+          --ssl-pass                          Optional path to the SSL/TLS certificate's passphrase
+      --no-port-switching                 Do not open a port other than the one specified when it's taken.
+
+  ENDPOINTS
+
+      Listen endpoints (specified by the --listen or -l options above) instruct serve
+      to listen on one or more interfaces/ports, UNIX domain sockets, or Windows named pipes.
+
+      For TCP ports on hostname "localhost":
+
+          $ serve -l 1234
+
+      For TCP (traditional host/port) endpoints:
+
+          $ serve -l tcp://hostname:1234
+
+      For UNIX domain socket endpoints:
+
+          $ serve -l unix:/path/to/socket.sock
+
+      For Windows named pipe endpoints:
+
+          $ serve -l pipe:\\.\pipe\PipeName
+
+PS C:\Users\13ria\Documents\GitHub\react-tutorial> serve -s build      
+
+   ┌──────────────────────────────────────────────────┐
+   │                                                  │
+   │   Serving!                                       │
+   │                                                  │
+   │   - Local:            http://localhost:5000      │
+   │   - On Your Network:  http://192.168.56.1:5000   │
+   │                                                  │
+   │   Copied local address to clipboard!             │
+   │                                                  │
+   └──────────────────────────────────────────────────┘
+
